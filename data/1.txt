@@ -1,0 +1,1 @@
+C=[N+](C)CCC,CC(C)=C(C)C,C=C(C)C,C=CC,C#CC(=C)C#C,COC,C=CC=C(C)C,Cc1ccc(C(=C(c2ccccc2)c2ccccc2)c2ccccc2)cc1，

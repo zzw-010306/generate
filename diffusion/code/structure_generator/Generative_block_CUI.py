@@ -35,20 +35,7 @@ def next_fragment_selection(Generator):
             break
     return None
 
-# 计算 Tanimoto 相似性
-def Tanimoto_from_mols(origin_mol, mols_list, return_morgan=False):
-    """计算原始分子与分子列表之间的 Tanimoto 相似性"""
-    if isinstance(origin_mol, str):
-        origin_mol = Chem.MolFromSmiles(origin_mol)
-        mols_list = [Chem.MolFromSmiles(m) for m in mols_list]
-        
-    origin_morgan = GetMorganFingerprintAsBitVect(origin_mol, 2, 2048)
-    mols_morgans = [GetMorganFingerprintAsBitVect(m, 2, 2048) for m in mols_list]
-    
-    if return_morgan:
-        return BulkTanimotoSimilarity(origin_morgan, mols_morgans), origin_morgan, mols_morgans
-    else:
-        return BulkTanimotoSimilarity(origin_morgan, mols_morgans)
+
 
 # 定义混合生成器类
 class hybrid_generator_multi:
